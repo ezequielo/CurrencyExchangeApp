@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>Currency Exchange App</h1>
+    {% include 'registration/login_status.html' %}
+    {% block content %}{% endblock %}
+</body>
+</html>

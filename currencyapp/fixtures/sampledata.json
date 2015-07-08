@@ -1,0 +1,411 @@
+[
+    {
+        "pk": 1,
+        "model": "currencyapp.currency",
+        "fields": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "currencyapp.currency",
+        "fields": {
+            "symbol": "\u20ac",
+            "code": "EUR",
+            "name": "Euro"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "currencyapp.currency",
+        "fields": {
+            "symbol": "",
+            "code": "GBP",
+            "name": "Great Britain Pound"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-24",
+            "sell_ccy": 1,
+            "value": 0.85,
+            "buy_ccy": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-24",
+            "sell_ccy": 2,
+            "value": 1.15,
+            "buy_ccy": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-24",
+            "sell_ccy": 1,
+            "value": 0.73,
+            "buy_ccy": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-24",
+            "sell_ccy": 3,
+            "value": 1.46,
+            "buy_ccy": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-24",
+            "sell_ccy": 2,
+            "value": 0.79,
+            "buy_ccy": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-24",
+            "sell_ccy": 3,
+            "value": 1.23,
+            "buy_ccy": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "currencyapp.rate",
+        "fields": {
+            "date": "2015-06-22",
+            "sell_ccy": 1,
+            "value": 0.8,
+            "buy_ccy": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 200.0,
+            "buy_amount": 170.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 200.0,
+            "buy_amount": 146.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 200.0,
+            "buy_amount": 170.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 500.0,
+            "buy_amount": 615.0,
+            "rate": 6,
+            "buy_ccy": 2,
+            "sell_ccy": 3,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 80000.0,
+            "buy_amount": 68000.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 20000.0,
+            "buy_amount": 15800.0,
+            "rate": 5,
+            "buy_ccy": 3,
+            "sell_ccy": 2,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 20.0,
+            "buy_amount": 17.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 200.0,
+            "buy_amount": 170.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-25",
+            "user": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 200.0,
+            "buy_amount": 160.0,
+            "rate": 7,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 300.0,
+            "buy_amount": 255.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 500.0,
+            "buy_amount": 425.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 205.0,
+            "buy_amount": 149.65,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 0.0,
+            "buy_amount": 0.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 0.0,
+            "buy_amount": 0.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 0.0,
+            "buy_amount": 0.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 28.57142857142857,
+            "buy_amount": 20.857142857142854,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 0.0,
+            "buy_amount": 0.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 200.0,
+            "buy_amount": 146.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 19,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 500.0,
+            "buy_amount": 425.0,
+            "rate": 1,
+            "buy_ccy": 2,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 20,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 553.0,
+            "buy_amount": 403.69,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 500.0,
+            "buy_amount": 365.0,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 4000.5,
+            "buy_amount": 4600.575,
+            "rate": 2,
+            "buy_ccy": 1,
+            "sell_ccy": 2,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 328.57142857142856,
+            "buy_amount": 239.85714285714283,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "currencyapp.log",
+        "fields": {
+            "sell_amount": 553.0,
+            "buy_amount": 403.69,
+            "rate": 3,
+            "buy_ccy": 3,
+            "sell_ccy": 1,
+            "date": "2015-06-26",
+            "user": 1
+        }
+    }
+]

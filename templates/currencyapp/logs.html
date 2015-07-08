@@ -1,0 +1,33 @@
+{% extends "currencyapp/base.html" %}
+{% block content %}
+    <h2>Logs</h2>
+    {% if object_list  %}
+        <table>
+            <tr>
+                <td>Date</td>
+                <td>Sell CCY</td>
+                <td>Sell Amount</td>
+                <td>Buy CCY</td>
+                <td>Buy Amount</td>
+                <td>Rate</td>
+                <td>User</td>
+            </tr>
+            {% for log in object_list %}
+            <tr>
+                <td>{{ log.date }}</td>
+                <td>{{ log.sell_ccy.code }}</td>
+                <td>{{ log.sell_amount|floatformat:3 }}</td>
+                <td>{{ log.buy_ccy.code }}</td>
+                <td>{{ log.buy_amount|floatformat:3 }}</td>
+                <td>{{ log.rate.value|floatformat:3 }}</td>
+                <td>{{ log.user }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else%}
+        <p>No logs to display</p>
+    {% endif %}
+
+<a href="{% url main_page %}">Back to the main page</a>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "currencyapp/base2.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+    <p class="error">Sorry, that's not a valid username or password</p>
+  {% endif %}
+    <p>Successfully logged out.</p>
+    <p>See you soon!</p>
+    <a href="{% url main_page %}">Back to the main page</a>
+
+{% endblock %}

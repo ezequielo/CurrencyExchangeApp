@@ -1,0 +1,20 @@
+{% extends "currencyapp/base.html" %}
+{% block content %}
+    {% if form.errors %}
+         <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+         </p>
+    {% endif %}
+
+    <form action="#" method="post">
+        <table>{{ form.as_table }}</table>
+        {% csrf_token %}
+        <input type="submit" value="Submit" id="submit" >
+    </form>
+
+    {% if res %}
+        <div id="id_res" >Result: {{ res|floatformat:3 }}</div>
+    {% endif %}
+
+    <a href="{% url logs_page %}">Logs page</a>
+{% endblock %}
