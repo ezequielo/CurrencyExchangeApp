@@ -13,6 +13,7 @@ class ExchangeFormTest(TestCase):
         In this scenario, a valid form is created and is_valid() method
         should return true
         """
+
         form = ExchangeForm({
             'amount': '3+500/2',
             'sell_ccy': 1,
@@ -25,6 +26,7 @@ class ExchangeFormTest(TestCase):
         In this scenario an invalid amount string is provided. clean_amount()
         method can't evaluate the expression and is_valid() method returns False
         """
+
         form = ExchangeForm({
             'amount': '3+500*',
             'sell_ccy': 1,
@@ -36,8 +38,10 @@ class ExchangeFormTest(TestCase):
         """
         This is another fail scenario, where sell_ccy and buy_ccy are the same currency.
         In this case, clean() method checks that they are the same and will return an error.
+
         :return:
         """
+
         form = ExchangeForm({
             'amount': '3+500/2',
             'sell_ccy': 1,

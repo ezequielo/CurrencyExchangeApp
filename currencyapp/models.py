@@ -6,6 +6,7 @@ class Currency(models.Model):
     """
     Currency model represents the different currencies available in the sysmte
     """
+
     name = models.CharField(max_length=20)
     code = models.CharField(max_length=3)
     symbol = models.CharField(max_length=1, null=True)
@@ -19,6 +20,7 @@ class Rate(models.Model):
     This model is responsible for keeping info about the latest rates given
     a sell and buy currencies
     """
+
     date = models.DateField()
     value = models.FloatField()
     sell_ccy = models.ForeignKey(Currency, related_name='fk_sell_ccy')
@@ -37,6 +39,7 @@ class Log(models.Model):
     It tracks the date, sell and buy currencies and amounts, as well as the user who
     requested the exchange and the rate value
     """
+
     date = models.DateField(auto_now_add=True)
     sell_amount = models.FloatField()
     sell_ccy = models.ForeignKey(Currency, related_name='fk_sell_ccy_log')

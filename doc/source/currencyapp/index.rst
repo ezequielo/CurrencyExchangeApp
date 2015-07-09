@@ -2,8 +2,6 @@
 Currencyapp
 ===========
 
-CurrencyApp:
-
 .. toctree::
    :maxdepth: 3
 

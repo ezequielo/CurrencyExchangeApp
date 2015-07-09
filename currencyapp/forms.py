@@ -12,6 +12,7 @@ class ExchangeForm(forms.Form):
     This form is responsible for retrieving the currency exchange info
     such as sell currency, amount and the desired buy currency
     """
+
     amount = forms.CharField()
     sell_ccy = forms.ModelChoiceField(queryset=Currency.objects.all())
     buy_ccy = forms.ModelChoiceField(queryset=Currency.objects.all())
@@ -20,8 +21,10 @@ class ExchangeForm(forms.Form):
         """
         Override of clean method in order to evaluate that sell and buy currencies set
         by the user are different
+
         :return: cleaned fields
         """
+
         if self.data['sell_ccy'] == self.data['buy_ccy'] and self.data['sell_ccy'] != '':
             errors = self._errors.setdefault('buy_ccy', ErrorList())
             errors.append(u'Sell and buy currencies must be different')
@@ -32,8 +35,10 @@ class ExchangeForm(forms.Form):
         """
         clean_amount() method validates the amount field using evaluate() function
         defined in the utils package
+
         :return: cleaned amount field
         """
+
         amount = self.cleaned_data['amount']
         try:
             amount = float(evaluate(amount))

@@ -11,6 +11,7 @@ class CurrencyappViewTest(TestCase):
         setUp() method is used to preload some data that will be used in
         some of the tests written bellow
         """
+
         User.objects.create(username='admin', password='')
         user = User.objects.get(username='admin')
         user.set_password('admin')
@@ -21,6 +22,7 @@ class CurrencyappViewTest(TestCase):
         In this test case we check that when /currencyapp/ url is requested by
         an anonymous user, CurrencyExchangeView redirects to login url
         """
+
         response = self.client.get('/currencyapp/', follow=True)
         self.assertRedirects(response, '/accounts/login/?next=/currencyapp/')
 
@@ -29,6 +31,7 @@ class CurrencyappViewTest(TestCase):
         This test case is similar to the previous one, but the url in this case is
         the logs url (/currencyapp/logs/)
         """
+
         response = self.client.get('/currencyapp/logs/', follow=True)
         self.assertRedirects(response, '/accounts/login/?next=/currencyapp/logs/')
 
@@ -37,6 +40,7 @@ class CurrencyappViewTest(TestCase):
         This is a successful test case for a logged user requesting an url which is
         login_required-protected
         """
+
         self.client.login(username='admin', password='admin')
         response = self.client.get('/currencyapp/')
         self.assertEqual(response.status_code, 200)
@@ -48,6 +52,7 @@ class CurrencyappViewTest(TestCase):
         logged, form is bound with valid data and a rate for the given currencies
         exists.
         """
+
         self.client.login(username='admin', password='admin')
         response = self.client.post('/currencyapp/',
                                     {'amount': '200',
@@ -61,6 +66,7 @@ class CurrencyappViewTest(TestCase):
         In this test case a valid form is sent but the view is not able to find a rate
         for the given currencies. Therefore, it will return an error to the user
         """
+
         self.client.login(username='admin', password='admin')
         response = self.client.post('/currencyapp/',
                                     {'amount': '200+4',

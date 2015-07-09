@@ -12,6 +12,7 @@ class CurrencyExchangeView(FormView):
     CurrencyExchangeView is the main view in this app, its aim is to interact with the
     user through the main template, sending and retrieving info requested by the user
     """
+
     template_name = 'currencyapp/main.html'
     success_url = '#'
     form_class = ExchangeForm
@@ -21,9 +22,11 @@ class CurrencyExchangeView(FormView):
         This view overrides form_valid() method in order to find a rate for the
         currencies in the form, then buy_amount value is computed and returned
         to the user.
+
         :param form: Form containing sell_amount, sell_ccy and buy_ccy
         :return:
         """
+
         cd = form.clean()
         sell_amount = cd['amount']
         sell_ccy = cd['sell_ccy']

@@ -9,9 +9,11 @@ class Parser:
     def __init__(self, string):
         """
         Init method, responsible for initiate the Parser object with the math expression
+
         :param string: Math expression contained in a string
         :return: A Parse object
         """
+
         self.string = string
         self.index = 0
 
@@ -19,8 +21,10 @@ class Parser:
         """
         This method make the necessary calls to retrieve a value which is the result of the
         math expression. Then this value is returned if the expression is valid
+
         :return: Result of the math expression
         """
+
         value = self.parse_addition()
         self.skip_whitespace()
         if self.has_next():
@@ -38,16 +42,20 @@ class Parser:
         """
         has_next() method is able to predict if there are more characters in the string or not
         considering the position given by the index variable
+
         :return: True/False depending if there are or not more character in the string
         """
+
         return self.index < len(self.string)
     
     def skip_whitespace(self):
         """
         Helper method for avoiding the whitespaces in the string so that, we can focus on
         the interesting characters such as numbers, operators or parenthesis
+
         :return: None. It just uptades the index variable
         """
+
         while self.has_next():
             if self.peek() in ' \t\n\r':
                 self.index += 1
@@ -58,8 +66,10 @@ class Parser:
         """
         With this method, the Parse class can detect if there is a symbol that implies addition
         or division in the char given by the index attribute
+
         :return: The result of a multiplication/division operation
         """
+
         values = [self.parse_multiplication()]
         while True:
             self.skip_whitespace()
@@ -78,8 +88,10 @@ class Parser:
         """
         With this method, the Parse class can detect if there is a symbol that implies multiplication
         or division in the char given by the index attribute
+
         :return: The result of a multiplication/division operation
         """
+
         values = [self.parse_parenthesis()]
         while True:
             self.skip_whitespace()
@@ -106,8 +118,10 @@ class Parser:
         """
         This chunk of code is intended to detect parenthesis in a expression, so that, the operations
         inside them ca be treated with a suitable priority
+
         :return: The value of a expression contained in a parenthesis
         """
+
         self.skip_whitespace()
         char = self.peek()
         if char == '(':
@@ -126,8 +140,10 @@ class Parser:
     def parse_negative(self):
         """
         parse_negative() method detects negative values in the expression
+
         :return: A negative number
         """
+
         self.skip_whitespace()
         char = self.peek()
         if char == '-':
@@ -140,8 +156,10 @@ class Parser:
         """
         This method is intended to make the necessary assertions to identify numbers in the
         string attribute
+
         :return: A substring containing a number with one or more digits including decimals
         """
+
         self.skip_whitespace()
         char = self.peek()
         if char in '0123456789.':
