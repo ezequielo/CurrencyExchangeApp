@@ -15,9 +15,7 @@ install:
 
 
 # command to run tests
-#
-#
-#
+  script: nosetest
 
 
 after_success:
