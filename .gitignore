@@ -3,3 +3,4 @@
 *.pyc
 *_db
 *.log
+doc/build/
