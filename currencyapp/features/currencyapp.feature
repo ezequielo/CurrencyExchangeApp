@@ -2,7 +2,7 @@ Feature: showing off behave
 
   Scenario: Successful transaction
     Given a user
-    When I log in
+    When I log in with username admin and password admin
     Then I go to the main page
     When I fill the form
     Then I see the results
@@ -10,7 +10,7 @@ Feature: showing off behave
 
   Scenario: Unsuccessful transaction
     Given a user
-    When I log in
+    When I log in with username admin and password admin
     Then I go to the main page
     When I fill the form with the same sell and buy currencies
     Then I see a warning
