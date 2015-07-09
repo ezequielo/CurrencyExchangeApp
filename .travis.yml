@@ -15,7 +15,7 @@ install:
 
 
 # command to run tests
-script: nosetest
+script: python manage.py test
 
 
 after_success:
@@ -25,8 +25,3 @@ after_success:
 #  - coveralls
   - pep8 currencyapp/
   - pep8 utils/
-
-notifications:
-  emails:
-    - ezequiel.rodriguez@ebury.com
-  on_failure: always

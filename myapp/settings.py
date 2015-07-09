@@ -123,12 +123,13 @@ INSTALLED_APPS = (
     'django_behave'
 )
 
-TEST_RUNNER = 'django_behave.runner.DjangoBehaveTestSuiteRunner'
-#TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-#NOSE_ARGS = [
-#    '--with-coverage',
-#    '--cover-package=currencyapp,utils',
-#]
+#TEST_RUNNER = 'django_behave.runner.DjangoBehaveTestSuiteRunner'
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=currencyapp,utils',
+]
 
 
 # A sample logging configuration. The only tangible logging
