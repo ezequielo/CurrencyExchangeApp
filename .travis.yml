@@ -12,6 +12,7 @@ install:
 #  - pip install coveralls
   - pip install radon
   - pip install pep8
+  - pip instal django_behave
 
 
 # command to run tests
